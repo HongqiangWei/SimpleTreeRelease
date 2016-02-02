@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>method_dialog</class>
+ <widget class="QDialog" name="method_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1166</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Choose thresholds</string>
+  </property>
+  <widget class="QDoubleSpinBox" name="epsilon_cluster_stem">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>140</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>100.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.005000000000000</double>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="abort">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>530</y>
+     <width>87</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Abort</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="compute">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>530</y>
+     <width>91</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> Compute </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>110</y>
+     <width>211</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>sphereMultiplier</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="sphere_radius_multiplier">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>100</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>100.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.005000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="epsilon_cluster_branch">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>180</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>100.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.005000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>150</y>
+     <width>151</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>epsClusterStem</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>190</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>epsClusterBranch</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="epsilon_sphere">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>220</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>100.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.005000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="min_radius_sphere_stem">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>420</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>100.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.005000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="min_radius_sphere_branch">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>460</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>100.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.005000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>220</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>epsSphere</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>460</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>minRadiusSphereBranch</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>260</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>minPtsRansacStem</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>251</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>281</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>151</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>530</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete Settings</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="minPts_ransac_stem">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>260</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="minimum">
+    <number>3</number>
+   </property>
+   <property name="maximum">
+    <number>99999999</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="minPts_ransac_branch">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>300</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="minimum">
+    <number>3</number>
+   </property>
+   <property name="maximum">
+    <number>99999999</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="minPts_cluster_stem">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>340</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="minimum">
+    <number>3</number>
+   </property>
+   <property name="maximum">
+    <number>99999999</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="minPts_cluster_branch">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>380</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="minimum">
+    <number>3</number>
+   </property>
+   <property name="maximum">
+    <number>99999999</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>300</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>minPtsRansacBranch</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>340</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>minPtsclusterStem</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>380</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>minPtsClusterBranch</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>420</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>minRadiusSphereStem</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>10</y>
+     <width>541</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Spherefollowing Method&lt;/span&gt;  (&lt;span style=&quot; font-style:italic;&quot;&gt;sphereMultiplier, epsClusterStem, epsClusterBranch, epsSphere,minPtsRansacStem, minPtsRansacBranch, minPtsClusterStem, minPtsClusterBranch, minRadiusSpher-&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;eStem, minRadiusSphereBranch&lt;/span&gt;)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The method used to fit cylinders into a de-noised point cloud and to build the tree model. Stem points should be detected before running this method. Spheres are utilized to follow the branching structure of&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;the tree from the root to its tips.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A sphere with a center point on a skeleton axis cuts the point cloud. All points within a distance of &lt;span style=&quot; font-style:italic;&quot;&gt;epsSphere&lt;/span&gt; to the sphere-surface are considered to be used to detect the next sphere and are put into a&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;sub point cloud P&lt;span style=&quot; vertical-align:sub;&quot;&gt;sub&lt;/span&gt; . P&lt;span style=&quot; vertical-align:sub;&quot;&gt;sub&lt;/span&gt; is subdivided into P&lt;span style=&quot; vertical-align:sub;&quot;&gt;Stem&lt;/span&gt; and P&lt;span style=&quot; vertical-align:sub;&quot;&gt;Branch&lt;/span&gt; . P&lt;span style=&quot; vertical-align:sub;&quot;&gt;Stem&lt;/span&gt; (P&lt;span style=&quot; vertical-align:sub;&quot;&gt;Branch&lt;/span&gt; is processed in same manner) is clustered then with &lt;span style=&quot; font-weight:600;&quot;&gt;Euclidean Clustering&lt;/span&gt; (&lt;span style=&quot; font-style:italic;&quot;&gt;epsClusterStem, &amp;gt;=5 ,minPtsClusterStem&lt;/span&gt;) (See description of clustering button) into i clusters P&lt;span style=&quot; vertical-align:sub;&quot;&gt;i&lt;/span&gt; . Each cluster represents a cross-sectional area of the stem/branch. A circle is fitted with RANSAC  algorithm into P&lt;span style=&quot; vertical-align:sub;&quot;&gt;i&lt;/span&gt; , if the number of points in P&lt;span style=&quot; vertical-align:sub;&quot;&gt; i &lt;/span&gt;exceeds &lt;span style=&quot; font-style:italic;&quot;&gt;minPtsRansacStem&lt;/span&gt;, and with the more robust but less accurate median method  otherwise. The center point of the circle, the center point of the sphere and the circle radius are chosen as cylinder parameters. The circle is enlarged with &lt;span style=&quot; font-style:italic;&quot;&gt;sphereMultiplier&lt;/span&gt; and transformed to a three dimensional sphere. The procedure is repeated recursively until no more cross sectional areas can be found.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The detected cylinders are improved with RANSAC algorithm. More details on the method itself and further post-processing steps on the detected&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;cylinders are given in Hackenberg et al. (2014, 2015).&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Text taken from &amp;quot;SimpleTree - an efficient open source tool to build tree models from TLS clouds&amp;quot;, submitted to MDPI.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
